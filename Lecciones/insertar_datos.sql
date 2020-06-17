@@ -1,6 +1,6 @@
 
 /* 
- seccion de insertar y crear datos
+SECCION PARA INSERTAR DATOS
 */
 
 CREATE TABLE cliente
@@ -120,6 +120,8 @@ INSERT INTO impositor (nombre_cliente, numero_cuenta)
   )
   SELECT * FROM impositores; 
 
+
+--- VERIFICAR LAS TABLAS EN EL SBD----
 SELECT * FROM impositor;
 SELECT * FROM prestario;
 SELECT * FROM prestamo;
@@ -128,13 +130,13 @@ SELECT * FROM cliente;
 SELECT * FROM cuenta;
 
 SELECT nombre_sucursal , to_char(activos, '999,999,999') activos
-from sucursal;
+FROM sucursal;
 
  SELECT nombre_sucursal
- FROM cuenta;
+FROM cuenta;
  
  SELECT numero_prestamo
- from prestamo
+ FROM prestamo
  WHERE nombre_sucursal = 'Navacerrada' AND importe>1200;
  
  SELECT nombre_cliente, prestario.numero_prestamo,importe

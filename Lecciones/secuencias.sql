@@ -1,5 +1,7 @@
+/*
+EJEMPLOS DE SECUENCIAS,T_TEMPORALES/GLOBALES Y EXCEPCIONES 
+*/
 ----- Ejemplo de secuencias----
-
 create sequence seq_pagos
     start with 10 
     increment by 1

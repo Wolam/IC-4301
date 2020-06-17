@@ -1,3 +1,8 @@
+/*
+
+--- EJEMPLOS DE CURSORES,LOOPS,FUNCIONES,PROCEDURES Y OUTPUT----
+*/
+
 SET serveroutput ON;
 
 DECLARE
@@ -16,7 +21,7 @@ BEGIN
 END;
 
 /
---- ejemplo de cursores  y LOOPS----
+--- Cursores  y LOOPS----
 
 DECLARE
     v_nombre_sucursal VARCHAR2(30);
@@ -59,7 +64,7 @@ BEGIN
 
 END;
 /
-
+--- FUNCION DE AGREGAR UNA CUENTA----
 CREATE OR REPLACE PROCEDURE agregar_sucursal( v_nombre IN VARCHAR2, v_ciudad IN VARCHAR2, v_activos IN NUMBER)
 
 IS
@@ -75,7 +80,7 @@ BEGIN
 agregar_sucursal('NIC lugar','Alajuela',1000);
 END;
 /
-
+--- FUNCION DE LA CUENTA IMPRIMIR CUENTAS MAYORES ----
 CREATE OR REPLACE PROCEDURE cuentas_mayores_sp(v_cuenta VARCHAR2, c1 IN OUT SYS_REFCURSOR)
 
 IS
@@ -84,13 +89,13 @@ BEGIN
     select * from cuenta where saldo > (select saldo from cuenta where numero_cuenta = v_cuenta);
 END;
 /
-
+---TEST DE CUENTAS MAYORES ----
 VAR c1 REFCURSOR
 EXEC cuentas_mayores_sp('C-102', :c1);
 
 PRINT c1;
 
-
+--- FUNCION DE SI UNA CUENTA ES MAYOR AL PROMEDIO ----
 CREATE OR REPLACE FUNCTION superior_al_promedio (cuenta_deseada VARCHAR2) 
     RETURN BOOLEAN
     IS
@@ -113,7 +118,7 @@ BEGIN
 END;
 /
 
---- DRIVER CODE PARA EL PROMEDIO----
+--- TEST PARA SUPERIOR_AL_PROMEDIO---
 
 SET SERVEROUTPUT ON;
 
@@ -129,6 +134,4 @@ END;
 --- DRIVER DE LA FUNCION DATE----
 SELECT SYSDATE FROM dual;
 SELECT * FROM USER_OBJECTS ;
-
-DROP PROCEDURE SYSTEM.superior_al_promedio; 
 

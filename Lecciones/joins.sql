@@ -1,4 +1,6 @@
-
+/*
+PRUEBAS DE JOINS,ALTERS Y SELECTS 
+*/
 --- seleccionar los que empiezan con a----
 SELECT * FROM
     sucursal
@@ -11,8 +13,7 @@ SELECT
 FROM
     sucursal   s
     LEFT JOIN cuenta c ON s.nombre_sucursal = c.nombre_sucursal;
-    
-    
+      
 --- insertar sin todad la cantidad de valores (probar default) ---
 select * from cuenta;
 INSERT into  cuenta(numero_cuenta, nombre_sucursal) VALUES ('C-333', 'Atenea');

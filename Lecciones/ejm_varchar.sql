@@ -11,6 +11,7 @@ insert into t_tipodato
 insert into t_tipodato2
     VALUES('ME LLAMO');
 
+
 select * from user_tables where table_name = 'TABLA_PRUEBA';
 
 select * from t_tipodato;

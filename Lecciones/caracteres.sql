@@ -1,3 +1,6 @@
+
+--- EJEMPLOS DE INSERTAR CARACTERES ESPECIALES---- 
+
 select * from cliente;
 
 delete from cliente
