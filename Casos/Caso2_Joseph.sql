@@ -242,8 +242,8 @@ CREATE table grupo_horario_aula
 ALTER TABLE grupo_horario_aula 
     add constraint FK_grupo_num
     foreign key (num_grupo)
-    references grupo(num_grupo); --depende de nuestro querido profesor chino
-    
+    references grupo(num_grupo); --depende de si hay repeticiones
+                                            
 ALTER TABLE grupo_horario_aula 
     add constraint FK_horario_id
     foreign key (id_horario)
