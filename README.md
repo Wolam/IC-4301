@@ -1,3 +1,3 @@
 # sql-sripts
 
-SQL scripts used in database course
+PL-SQL scripts used in database course
