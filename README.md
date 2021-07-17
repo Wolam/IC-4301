@@ -1,2 +1,3 @@
-# IC-4301
-Database course
+# sql-sripts
+
+SQL scripts used in database course

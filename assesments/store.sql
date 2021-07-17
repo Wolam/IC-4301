@@ -1,7 +1,6 @@
 --- %%%%%%%%% EXAMEN 2 BD1 I SEMESTRE 2020 %%%%%%%%%
 --- WILHELM CARSTENS SOTO
 
-
 -- %%%%%%%%% PRIMERA PARTE %%%%%%%%%%
 
 ---Ejercicio A
